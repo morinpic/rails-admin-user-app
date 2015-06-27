@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  root to: "home#index"
+
+  devise_for :admin_users
+  devise_scope :admin_user do
+    get "login", :to => "devise/sessions#new"
+  end
+
   resources :admin_users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

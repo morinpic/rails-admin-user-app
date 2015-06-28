@@ -49,6 +49,7 @@ group :development, :test do
   #Add
   gem 'meta_request', '~> 0.3.4'
   gem 'better_errors', '~> 2.1.1'
+  gem 'binding_of_caller', '~> 0.7.2'
   gem 'pry-rails'
   gem 'pry', '~> 0.10'
   gem 'pry-byebug', '~> 3.1.0'

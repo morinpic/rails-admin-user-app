@@ -55,6 +55,7 @@ group :development, :test do
   gem 'pry-byebug', '~> 3.1.0'
   gem 'hirb'
   gem 'hirb-unicode'
+  gem 'rails-erd', '~> 1.4.0'
 end
 
 group :development do

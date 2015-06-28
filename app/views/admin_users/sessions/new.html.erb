@@ -1,5 +1,17 @@
 <h2>Log in</h2>
 
+<%= simple_form_for resource, as: resource_name, url: session_path(resource_name), :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :email, autofocus: true %>
+  <%= f.input :password %>
+
+  <div class="form-actions">
+    <%= f.submit "Log in", :class => 'btn btn-primary' %>
+  </div>
+<% end %>
+
+<% if false %>
+<%= render "admin_users/shared/links" %>
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -22,5 +34,4 @@
     <%= f.submit "Log in" %>
   </div>
 <% end %>
-
-<%= render "admin_users/shared/links" %>
+<% end %>

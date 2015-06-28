@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20150627230554) do
 
   create_table "admin_users", force: :cascade do |t|
-    t.string   "username"
+    t.string   "username",                            null: false
     t.string   "avatar"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
@@ -32,5 +32,6 @@ ActiveRecord::Schema.define(version: 20150627230554) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  add_index "admin_users", ["username"], name: "index_admin_users_on_username", unique: true
 
 end
